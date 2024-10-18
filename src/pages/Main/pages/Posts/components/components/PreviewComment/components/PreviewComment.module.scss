@@ -1,0 +1,241 @@
+.childcom {
+    * {
+        color: white;
+    }
+
+    padding-top: 5px;
+    padding: 15px 0 0 0;
+
+    .childcomcontainer {
+        margin-left: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-bottom: 1px solid #bababa;
+
+        .childcomwrapper {
+            display: flex;
+            gap: 10px;
+            .left {
+                .imgdiv {
+                    height: 37.5px;
+                    width: 37.5px;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .right {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                padding-bottom: 5px;
+                padding-right: 20px;
+
+                .rightcom {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    width: 100%;
+
+                    .rightcomtopdiv {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .addressedto {
+                        display: flex;
+                        gap: 9px;
+
+                        .arrow {
+                            font-weight: 400 !important;
+                            font-size: 13px !important;
+                            padding-top: 3px;
+                            color: #bababa;
+                        }
+
+                        .addressed {
+                            font-weight: 400 !important;
+                            text-decoration: underline;
+                            font-size: 15px !important;
+                            color: #bababa;
+                        }
+                    }
+
+                    .names {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 10px;
+
+                        .rightcombotleftdiv {
+                            display: flex;
+                        }
+
+                        .rightcombotdiv {
+                            display: flex;
+                            gap: 20px;
+                        }
+
+                        .namesleft {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            .who {
+                                background: black;
+                                font-size: 13px;
+                                padding: 3px 7.5px;
+                                border-radius: 10px;
+                            }
+
+                            span {
+                                font-weight: 600;
+                                font-size: 16px;
+                            }
+                        }
+
+                        p {
+                            font-size: 13.5px;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .bottom {
+                        padding: 5px 0;
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .btns {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            button {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 5px;
+
+                                span {
+                                    font-size: 14px;
+                                    color: #bababa;
+                                }
+                            }
+
+                            .dislikeandlike {
+                                border-radius: 7px;
+                                background: #181818;
+                                padding: 4px 5px;
+                                display: flex;
+                                align-items: center;
+
+                                button:first-child {
+                                    padding: 0px 10px 0px 5px;
+                                    border-right: 1px solid #bababa;
+                                }
+
+                                button:last-child {
+                                    padding: 0px 5px 0px 10px;
+                                }
+                            }
+
+                            .com {
+                                background: #181818;
+                                padding: 4px 10px;
+                                display: flex;
+                                align-items: center;
+                                border-radius: 7px;
+                            }
+                        }
+
+                        .date {
+                            font-size: 13px;
+                            color: #bababa;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// =================================== REPLY COMMENT ===================================
+.replycommentdiv {
+    padding: 0 15px 12.5px 0;
+    margin-left: 50px;
+
+    form {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+
+        .left {
+            .imgdiv {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 35px;
+                min-width: 35px;
+                min-height: 35px;
+                max-height: 35px;
+
+                img {
+                    max-width: 35px;
+                    min-width: 35px;
+                    min-height: 35px;
+                    max-height: 35px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .mid {
+            width: 100%;
+
+            .inpdiv {
+                border: 1px solid #b9b9b9;
+                padding: 7px 15px;
+                border-radius: 15px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                input {
+                    width: 90%;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            .closereply {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 30px;
+                min-height: 30px;
+                max-width: 30px;
+                max-height: 30px;
+                border-radius: 50%;
+                border: 2px solid #bababa;
+                color: #bababa;
+            }
+
+            display: flex;
+            align-items: center;
+        }
+    }
+}

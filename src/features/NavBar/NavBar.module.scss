@@ -1,0 +1,53 @@
+.main {
+   width: 1500px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: #272727;
+   border-bottom: 1px solid rgb(137, 137, 137);
+   border-left: 1px solid rgb(137, 137, 137);
+   border-right: 1px solid rgb(137, 137, 137);
+   border-bottom-right-radius: 20px;
+   border-bottom-left-radius: 20px;
+   padding: 10px 15px;
+   z-index: 99;
+
+   * {
+      color: white;
+   }
+}
+
+.left {
+   display: flex;
+   gap: 15px;
+   .lefttexts {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3px;
+
+      .nicsbar {
+         font-size: 20px;
+      }
+
+      .nicsbarsubtitle {
+         color: gray;
+      }
+   }
+}
+
+.right {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   
+   .prembtn {
+      padding: 12.5px 24px;
+      border-radius: 15px;
+      background-image: url('@images/Prembg.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-size: 19px;
+   }
+}

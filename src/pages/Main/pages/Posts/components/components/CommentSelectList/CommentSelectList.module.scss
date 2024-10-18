@@ -1,0 +1,30 @@
+.commentSelectList {
+   position: absolute;
+   right: 0;
+   top: 150%;
+   min-width: 150px;
+   padding: 8px;
+   border-radius: 7px;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+
+   .commentSelect {
+      transition: .2s ease;
+      border-radius: 5px;
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+         background: #302E2E;
+      }
+      overflow-x: hidden;
+
+      span {
+         text-overflow: ellipsis;
+         font-size: 13px;
+      }
+   }
+}

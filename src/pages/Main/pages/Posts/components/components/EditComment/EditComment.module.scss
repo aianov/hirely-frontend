@@ -1,0 +1,27 @@
+.editingform {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   input {
+      border-bottom: 1px solid rgb(186, 186, 186);
+      padding: 5px;
+      width: 100%;
+   }
+
+   .btns {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      font-size: 14px;
+      
+      button {
+         padding: 6px 10px;
+         border-radius: 5px;
+         transition: .2s ease-in-out;
+         &:hover {
+            opacity: .7;
+         }
+      }
+   }
+}

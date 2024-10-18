@@ -1,0 +1,414 @@
+@mixin PostBtns {
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    align-content: center;
+    background: #181818;
+    padding: 6px 12.5px;
+    border-radius: 10px;
+    font-size: 17px;
+
+    span {
+        margin-top: 2px;
+        color: #b5b5b5;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.fakebar {
+    min-height: 59px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: sticky;
+    top: 80px;
+    z-index: 3;
+    background: #111111;
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}
+
+.bar {
+    padding: 10px 20px;
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid rgb(137, 137, 137);
+    background: #272727;
+
+    * {
+        color: white;
+    }
+
+    .left {
+        width: 40%;
+        padding-right: 20px;
+        border-right: 1px solid #8f8f8f;
+
+        .inpdiv {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            padding: 9px 15px;
+            max-width: 100%;
+            background: #181818;
+
+            input {
+                width: 90%;
+
+                &::placeholder {
+                    color: gray;
+                }
+            }
+        }
+    }
+
+    .right {
+        width: 60%;
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pending {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.checkcomments {
+    * {
+        color: white;
+    }
+
+    padding: 12.5px 70px;
+
+    .checkcommentscontainer {
+        cursor: pointer;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .textcontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #bababa;
+
+            span {
+                color: #bababa;
+            }
+        }
+    }
+}
+
+.checkreplies {
+    * {
+        color: white;
+    }
+
+    padding: 12.5px 70px 12.5px 70px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+    .checkcommentscontainer {
+        cursor: pointer;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .textcontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #bababa;
+
+            span {
+                color: #bababa;
+            }
+        }
+    }
+}
+
+.combtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.combtnsone {
+    padding: 10px 10px 10px 70px;
+}
+
+.realchildcom {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0 0 70px;
+
+    * {
+        color: white;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        border-bottom: 1px solid #bababa;
+
+        .topcontainer {
+            display: flex;
+            gap: 10px;
+
+            .left {
+                .imgdiv {
+                    height: 37.5px;
+                    width: 37.5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .right {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                padding-bottom: 5px;
+                padding-right: 20px;
+
+                .rightcom {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    width: 100%;
+
+                    .addressedto {
+                        display: flex;
+                        gap: 9px;
+
+                        .arrow {
+                            font-weight: 400 !important;
+                            font-size: 13px !important;
+                            padding-top: 3px;
+                            color: #bababa;
+                        }
+
+                        .addressed {
+                            font-weight: 400 !important;
+                            text-decoration: underline;
+                            font-size: 15px !important;
+                            color: #bababa;
+                        }
+                    }
+
+                    .names {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .namesleft {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            .who {
+                                background: black;
+                                font-size: 13px;
+                                padding: 3px 7.5px;
+                                border-radius: 10px;
+                            }
+
+                            span {
+                                font-weight: 600;
+                                font-size: 16px;
+                            }
+                        }
+
+                        p {
+                            font-size: 13.5px;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .bottom {
+                        padding: 5px 0;
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .btns {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            button {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 5px;
+
+                                span {
+                                    font-size: 14px;
+                                    color: #bababa;
+                                }
+                            }
+
+                            .dislikeandlike {
+                                border-radius: 7px;
+                                background: #181818;
+                                padding: 4px 5px;
+                                display: flex;
+                                align-items: center;
+
+                                button:first-child {
+                                    padding: 0px 10px 0px 5px;
+                                    border-right: 1px solid #bababa;
+                                }
+
+                                button:last-child {
+                                    padding: 0px 5px 0px 10px;
+                                }
+                            }
+
+                            .com {
+                                background: #181818;
+                                padding: 4px 10px;
+                                display: flex;
+                                align-items: center;
+                                border-radius: 7px;
+                            }
+                        }
+
+                        .date {
+                            font-size: 13px;
+                            color: #bababa;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.replychildcommentdiv {
+    padding: 0 15px 12.5px 50px;
+    border-bottom: 1px solid #bababa;
+
+    form {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+
+        .left {
+            .imgdiv {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 35px;
+                min-width: 35px;
+                min-height: 35px;
+                max-height: 35px;
+
+                img {
+                    max-width: 35px;
+                    min-width: 35px;
+                    min-height: 35px;
+                    max-height: 35px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .mid {
+            width: 100%;
+
+            .inpdiv {
+                border: 1px solid #b9b9b9;
+                padding: 5px 15px;
+                border-radius: 12.5px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 14px;
+
+                input {
+                    width: 90%;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            .closereply {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 30px;
+                min-height: 30px;
+                max-width: 30px;
+                max-height: 30px;
+                border-radius: 50%;
+                border: 2px solid #bababa;
+                color: #bababa;
+            }
+
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.inpdiv {
+    * {
+        color: white;
+    }
+}
+
+.rightcomtopdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infinitescroll {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media (max-width: 800px) {
+        gap: 10px;
+    }
+}

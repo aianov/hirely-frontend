@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    gap: 1px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    font-size: 14px;
+    display: inline-block;
+}

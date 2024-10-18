@@ -1,0 +1,50 @@
+.contextMenu {
+    position: absolute;
+    background: white;
+    border: 1px solid rgb(83, 83, 83);
+    z-index: 1000000;
+    padding: 5px 8px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    span {
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+
+    .contextMenuBtn {
+        transition: 0.2s ease;
+        border-radius: 5px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+
+        &:hover {
+            background: #302e2e;
+        }
+    }
+}
+
+.deletebtn {
+    span {
+        color: red !important;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    z-index: 999; /* Make sure it's above the chat content but below the context menu */
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}

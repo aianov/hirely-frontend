@@ -1,0 +1,156 @@
+.colors,
+.radiusdiv,
+.wallpapers,
+.themes {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radiusdiv,
+.wallpapers,
+.themes {
+    border-top: 1px solid rgb(83, 83, 83);
+}
+
+.variant,
+.radius {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+.scroll {
+    overflow-x: scroll;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 5px;
+
+    &::-webkit-scrollbar {
+        width: 1px;
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ff8a00;
+        border-radius: 10px;
+        width: 1px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .mythemes {
+        display: flex;
+        gap: 20px;
+
+        .createtheme {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            .createthemebtn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                min-width: 240px;
+                max-width: 240px;
+                min-height: 150px;
+                border: 1px dashed #bababa;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+.wallpaperdiv,
+.themediv {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .wallpaper,
+    .theme {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        border: 1px solid #bababa75;
+        min-height: 150px;
+        cursor: pointer;
+    }
+
+    .theme {
+        padding: 15px;
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 15px;
+            background: #393939;
+            font-size: 13px;
+        }
+    }
+}
+
+.mythemeslist {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .theme {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        border: 1px solid #bababa75;
+        min-width: 240px;
+        max-width: 240px;
+        min-height: 150px;
+        cursor: pointer;
+        padding: 15px;
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 15px;
+            background: #393939;
+            font-size: 13px;
+        }
+    }
+}
+
+.stick {
+    max-height: 150px;
+    border-right: 2px solid #4f4d4d;
+    border-radius: 2px;
+}

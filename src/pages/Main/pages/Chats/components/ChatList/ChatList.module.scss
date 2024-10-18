@@ -1,0 +1,165 @@
+.gradientText {
+    background: linear-gradient(to right, #ff7c03, #ff7c03, #ff2e00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.main {
+    padding: 20px;
+    @media (max-width: 1200px) {
+        padding: 0;
+    }
+}
+
+.mainscroll {
+    max-height: 60vh;
+}
+
+.message,
+.messageTyping {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+.messageTyping {
+    font-size: 13px;
+    padding-top: 1px;
+}
+
+.chats {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 60vh;
+
+    @media (max-width: 1200px) {
+        gap: 0;
+    }
+
+    .nothing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 25px;
+    }
+
+    .chat {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-radius: 30px;
+        transition: 0.2s ease-in-out;
+        gap: 10px;
+
+        @media (max-width: 1200px) {
+            padding: 5px 8px;
+            border-radius: 0;
+        }
+
+        &:hover {
+            background: #464646;
+
+            .circle {
+                border: 3px solid #464646 !important;
+            }
+        }
+
+        .left {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+
+            .ava {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .circle {
+                transition: 0.2s ease-in-out;
+            }
+
+            .names {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 3px;
+
+                .usernames {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 5px;
+
+                    .usernamestatuses {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+
+                    .left {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+
+                    .right {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .left {
+                    .message,
+                    .gradientText {
+                        font-size: 14px;
+                    }
+
+                    .title {
+                        font-size: 17px;
+                    }
+                }
+
+                .bottom {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 7px;
+
+                    .right {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        gap: 5px;
+
+                        .unreaded {
+                            background: #ff4d00;
+                            border-radius: 15px;
+                            padding: 2px 7px;
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.typingdiv {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}

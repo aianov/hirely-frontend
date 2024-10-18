@@ -1,0 +1,527 @@
+.profilecontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+
+    .top {
+        display: flex;
+        gap: 15px;
+
+        * {
+            color: white;
+        }
+
+        .leftcontainer,
+        .right {
+            border: 1px solid rgb(83, 83, 83);
+            background: #272727;
+            border-radius: 20px;
+            padding: 15px;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            width: 25%;
+
+            .removefriend,
+            .pendingfriend,
+            .addfriend {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                border-radius: 15px;
+                padding: 12.5px 5px;
+                transition: background 0.2s ease;
+            }
+
+            .addfriend {
+                background: #ff7c03;
+
+                &:hover {
+                    background: #ff7d03bc;
+                }
+            }
+
+            .removefriend,
+            .pendingfriend {
+                background: #272727;
+                border: 1px solid rgb(83, 83, 83);
+
+                &:hover {
+                    background: #272727c0;
+                }
+            }
+
+            .removefriend {
+                span {
+                    color: #5b5b5b;
+                }
+            }
+
+            .leftcontainer {
+                position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 5px;
+
+                .editbtn {
+                    position: absolute;
+                    right: 10%;
+                    top: 10%;
+                }
+
+                .avatardiv {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &,
+                    img {
+                        max-width: 70px;
+                        min-width: 70px;
+                        max-height: 70px;
+                        min-height: 70px;
+                        border-radius: 50%;
+                    }
+
+                    .img {
+                        width: 100%;
+                    }
+                }
+
+                .tag {
+                    color: #bababa;
+                    font-size: 13px;
+                }
+
+                .more {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    .who {
+                        background: black;
+                        padding: 4px 10px;
+                        border-radius: 15px;
+                        font-size: 13px;
+                    }
+
+                    .icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 75%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+
+            .top {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                span {
+                    font-size: 17px;
+                }
+            }
+
+            .description {
+                font-size: 14px;
+                color: #bababa;
+                text-wrap: wrap;
+            }
+        }
+    }
+
+    .bottom {
+        * {
+            color: white;
+        }
+
+        border: 1px solid rgb(83, 83, 83);
+        background: #272727;
+        border-radius: 20px;
+        padding: 20px;
+
+        .top {
+            display: flex;
+            flex-direction: column;
+
+            .nav {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                span {
+                    font-size: 16px;
+                }
+            }
+
+            .about {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+                row-gap: 10px;
+                border-bottom: 1px solid gray;
+                padding-bottom: 15px;
+
+                .bd,
+                .email,
+                .gender {
+                    display: flex;
+                    align-items: center;
+                    gap: 7.5px;
+
+                    * {
+                        color: #bababa;
+                    }
+
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .mid {
+            border-bottom: 1px solid gray;
+            padding: 15px 5px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @media (max-width: 600px) {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .infodiv {
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+                position: relative;
+
+                span:first-child {
+                    font-size: 23px;
+                }
+
+                .counter {
+                    position: absolute;
+                    right: 0;
+                    top: -9px;
+                    background: red;
+                    border-radius: 50%;
+                    width: 22.5px;
+                    height: 22.5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    span {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .midleft,
+            .midmid,
+            .midright {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .midmid {
+                padding: 0px 20px;
+                border-left: 1px solid gray;
+                border-right: 1px solid gray;
+
+                @media (max-width: 600px) {
+                    border: none;
+                    padding: 0;
+                }
+
+                span {
+                    color: #bababa;
+                }
+            }
+
+            .midright {
+                span {
+                    color: #4fd100;
+                }
+            }
+        }
+
+        .bot {
+            padding: 15px 5px 0px 5px;
+            display: flex;
+
+            gap: 20px;
+
+            .left {
+                width: 60%;
+            }
+
+            .right {
+                width: 40%;
+            }
+
+            .left,
+            .right {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .nav {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    span {
+                        color: #bababa;
+                    }
+                }
+
+                .plang {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    row-gap: 7px;
+
+                    .icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                }
+            }
+
+            .left {
+                padding-right: 20px;
+                border-right: 1px solid gray;
+            }
+
+            .right {
+                .whodiv {
+                    display: flex;
+
+                    .who {
+                        background: black;
+                        padding: 4px 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .bar {
+        // * {
+        //    color: white;
+        // }
+
+        border: 1px solid rgb(83, 83, 83);
+        background: #272727;
+        border-radius: 15px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+
+        .scroll {
+            overflow-y: auto;
+            display: flex;
+            gap: 5px;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #ff8a00;
+                border-radius: 10px;
+                border: 2px solid #1c0808;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: transparent;
+                border-radius: 10px;
+                padding: 5px;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 35px;
+                border-radius: 10px;
+                padding: 7px 20px;
+                color: #bababa;
+            }
+        }
+
+        .createpostbtndiv {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .createpostbtn {
+                background: #6e6e6e;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                border-radius: 10px;
+                padding: 7px 20px;
+            }
+
+            .youhave {
+                position: absolute;
+                top: -8px;
+                right: -15px;
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(230, 37, 37);
+                border-radius: 5px;
+                color: white;
+                padding: 2px 5px;
+            }
+        }
+    }
+}
+
+.nothave {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        text-align: center;
+        font-size: 16px;
+        color: #bababa !important;
+    }
+}
+
+.notfounduser {
+    border: 1px solid rgb(83, 83, 83);
+    background: #272727;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    p {
+        color: #bababa;
+    }
+}
+
+.useractionbtns,
+.useractionbtns2 {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    padding: 0 1px;
+}
+
+.useractionbtns {
+    height: 45px;
+
+    .sendmessage,
+    .addfriendmini,
+    .pendingfriendmini {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12.5px;
+    }
+
+    .sendmessage {
+        width: 100%;
+        gap: 15px;
+        border: 1px solid #353535;
+    }
+
+    .addfriendmini,
+    .pendingfriendmini {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 0 15px;
+        transition: background 0.2s ease;
+
+        background: #ff7c03;
+
+        &:hover {
+            background: #ff7d03bc;
+        }
+    }
+
+    .pendingfriendmini {
+        background: #272727;
+        border: 1px solid rgb(83, 83, 83);
+
+        &:hover {
+            background: #272727c0;
+        }
+    }
+}
+
+.useractionbtns2 {
+    height: 45px;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12.5px;
+    }
+
+    .sendmessagemini {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 0 15px;
+        border: 1px solid #353535;
+        transition: background 0.2s ease;
+    }
+
+    .removefriend {
+        width: 100%;
+    }
+}

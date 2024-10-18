@@ -1,0 +1,118 @@
+.asidebar {
+    position: fixed;
+    padding: 30px 30px 120px 30px;
+    top: 0;
+    right: -100%; // Adjust width as needed to hide off-screen
+    height: 100vh;
+    width: 100%; // Adjust width as needed
+    transition: right 0.3s ease; // Smooth transition when showing
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 1px solid rgb(120, 120, 120);
+    z-index: 1;
+}
+
+.asidebar.active {
+    right: 0; // Bring into view when active
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.usercard {
+    display: flex;
+    gap: 10px;
+    background: #181818;
+    border-radius: 15px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+
+    .container {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        .imgdiv {
+            min-width: 57px;
+            min-height: 55px;
+            max-width: 57px;
+            max-height: 55px;
+
+            img {
+                min-width: 57px;
+                min-height: 55px;
+                max-width: 57px;
+                max-height: 55px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .name {
+            span {
+                margin-left: 2spx;
+                font-size: 19px;
+            }
+        }
+
+        .tags {
+            display: flex;
+            gap: 5px;
+
+            .who {
+                font-size: 10px;
+                background: black;
+                border-radius: 7.5px;
+                padding: 4px 8px;
+            }
+
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.bot {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .leavebtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        padding: 12.5px 10px;
+        border-radius: 10px;
+    }
+}
+
+.settingsbtn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

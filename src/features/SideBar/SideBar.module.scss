@@ -1,0 +1,143 @@
+.main {
+  height: 100%;
+  background: #272727;
+  border: 1px solid rgb(137, 137, 137);
+  border-radius: 20px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  * {
+    color: white;
+  }
+}
+
+.usercard {
+  display: flex;
+  gap: 10px;
+  background: #181818;
+  border-radius: 15px;
+  padding: 10px 15px;
+
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .imgdiv {
+      min-width: 57px;
+      min-height: 55px;
+      max-width: 57px;
+      max-height: 55px;
+
+      img {
+        min-width: 57px;
+        min-height: 55px;
+        max-width: 57px;
+        max-height: 55px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    .name {
+      display: flex;
+      flex-direction: column;
+
+      span:first-child {
+        font-size: 19px;
+      }
+
+      span:last-child {
+        font-size: 11px;
+        color: gray;
+      }
+    }
+
+    .tags {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .who {
+        font-size: 10px;
+        background: black;
+        border-radius: 7.5px;
+        padding: 4px 8px;
+      }
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@mixin NavBtn {
+  padding: 10px 20px;
+  transition: .5s ease;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  gap: 15px;
+}
+
+.navbtns {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .activenavbtn {
+    @include NavBtn();
+    background: linear-gradient(to right, #c6660d 0%, #c1640d 50%, #bf2e0e 100%);
+  }
+
+  .navbtn {
+    @include NavBtn();
+
+    &:hover {
+      background: #ff73004f;
+    }
+  }
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .leavebtn,
+  .settingsbtn {
+    background: #181818;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .leavebtn {
+    gap: 12.5px;
+    width: 100%;
+    padding: 12px 15px;
+  }
+
+  .settingsbtn {
+    padding: 10px 10px;
+    justify-content: center;
+    min-width: 50px;
+    max-width: 50px;
+  }
+}

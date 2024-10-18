@@ -1,0 +1,14 @@
+{
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "all",
+    "printWidth": 120,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "plugins": ["prettier-plugin-organize-attributes"],
+    "attributeGroups": ["^class$", "^(id|name)$", "$DEFAULT", "^aria-"],
+    "bracketSpacing": true,
+    "arrowParens": "always"
+}

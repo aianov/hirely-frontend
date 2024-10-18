@@ -1,0 +1,73 @@
+.main {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.mid {
+   .btnforshare {
+      position: relative;
+      border: 1px dashed #464646;
+      padding: 0 15px;
+      height: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      display: inline-block;
+
+      .copiedMessage {
+         display: block;
+         width: 100%;
+         text-align: center;
+      }
+
+      .linkContainer {
+         position: relative;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .link, .copiedMessage {
+         position: absolute;
+         width: 100%;
+         text-align: center;
+      }
+
+      .link {
+         color: #71AAEB;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         display: block;
+         width: 100%;
+      }
+   }
+}
+
+.bot {
+   display: flex;
+   gap: 15px;
+
+   button {
+      font-size: 15px;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      border-radius: 7px;
+      transition: .2s ease-in-out;
+
+      &:hover {
+         opacity: .7;
+      }
+   }
+
+   .submit {
+      background: white;
+      color: black;
+   }
+}

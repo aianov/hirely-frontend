@@ -1,0 +1,163 @@
+.main {
+   * {
+      color: white;
+   }
+}
+
+.mid,
+.bot,
+.footer {
+   padding: 20px;
+}
+
+.mid {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   border-bottom: 1px solid rgb(83, 83, 83);
+
+   .profile {
+      display: flex;
+      gap: 17.5px;
+      align-items: center;
+
+      .names {
+         display: flex;
+         flex-direction: column;
+         gap: 5px;
+
+         .name {
+            font-size: 20px;
+         }
+
+         .tag {
+            color: #BABABA;
+            font-size: 16px;
+         }
+      }
+   }
+
+   .description {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .title {
+         color: #bababa;
+         font-size: 18px;
+      }
+
+      .inpdiv {
+         position: relative;
+
+         .howmuch {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            font-size: 14px;
+         }
+
+         .descriptioninput {
+            border: 1px solid #3B3B3B;
+            background: #393939;
+            border-radius: 10px;
+            width: 100%;
+            padding: 11px 12.5px;
+            word-break: break-all;
+            height: 125px;
+
+            &::-webkit-scrollbar {
+               width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+               background-color: #FF8A00;
+               border-radius: 10px;
+               border: 2px solid #393939;
+            }
+
+            &::-webkit-scrollbar-track {
+               background-color: transparent;
+               border-radius: 10px;
+               padding: 5px;
+            }
+
+            &::placeholder {
+               color: #BABABA;
+            }
+         }
+      }
+   }
+}
+
+.bot {
+   border-bottom: 1px solid rgb(83, 83, 83);
+
+   .inps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .datepicker {
+         display: flex;
+         flex-direction: column;
+         gap: 5px;
+
+         .datepickertitle {
+            color: #BABABA;
+            padding-left: 3px;
+         }
+      }
+   }
+}
+
+.footer {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+
+   .btncontainer {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .btntitle {
+         padding-left: 3px;
+         color: #bababa;
+      }
+   }
+
+   .btns {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      .cancelbtn,
+      .submitbtn {
+         transition: opacity .2s ease;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 50%;
+         border-radius: 10px;
+         padding: 10px;
+      }
+
+      .cancelbtn {
+         border: 1px solid white;
+
+         &:hover {
+            opacity: 0.7;
+         }
+      }
+
+      .submitbtn {
+         color: black;
+         background: white;
+
+         &:hover {
+            opacity: 0.7;
+         }
+      }
+   }
+}

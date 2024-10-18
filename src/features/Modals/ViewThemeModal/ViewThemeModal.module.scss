@@ -1,0 +1,18 @@
+.mid {
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+
+   .previewtheme {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 20px;
+      border: 1px solid #bababa75;
+      min-width: 240px;
+      max-width: 240px;
+      min-height: 150px;
+      cursor: pointer;
+      padding: 15px;
+   }
+}

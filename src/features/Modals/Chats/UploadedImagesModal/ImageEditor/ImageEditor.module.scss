@@ -1,0 +1,87 @@
+// .asd {
+//    @apply bg-blue-500 text-white p-4;
+// }
+
+$editorsWidth: 450px;
+
+// .imgeditor {
+//     width: 100% !important;
+//     height: $editorsWidth !important;
+// }
+
+.draweditor {
+    //  height: $editorsWidth !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+}
+
+.top {
+    padding: 20px 20px 15px 20px;
+    border-bottom: 1px solid rgb(83, 83, 83);
+    .toptitle {
+        font-size: 1.4rem;
+    }
+}
+
+.mid {
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .midimgcontainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .midtext {
+            font-size: 0.85rem;
+        }
+
+        .midimg {
+            padding: 20px;
+            border-radius: 15px;
+        }
+    }
+
+    .editbtns {
+        .midtext {
+            font-size: 0.85rem;
+        }
+
+        .topbtns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .editbtn {
+                background: #3c3c3c;
+                border-radius: 10px;
+                padding: 7px 10px;
+                display: flex;
+                flex-direction: column;
+
+                .editbtntop {
+                    width: 130px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 20px;
+
+                    span {
+                        white-space: nowrap;
+                    }
+
+                    .editbtntoplefttext {
+                        font-size: 0.8rem;
+                    }
+
+                    .editbtntoprighttext {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+    }
+}

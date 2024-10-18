@@ -1,0 +1,1 @@
+export type ReportType = 'post' | 'comment' | 'user' | 'chat' | 'vacancy'

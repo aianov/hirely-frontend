@@ -1,0 +1,341 @@
+.main {
+   padding-bottom: 20px;
+}
+
+.select {
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.plans,
+.goals {
+   border-radius: 10px;
+   width: 100%;
+   border: 1px solid rgb(83, 83, 83);
+}
+
+.nogoals,
+.noplans {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 90px 20px;
+   gap: 7px;
+
+   .addgoalbtn,
+   .addplanbtn {
+      border-radius: 7px;
+      padding: 1px 20px;
+      font-size: 18px;
+   }
+
+   span {
+      text-align: center;
+      font-size: 14px;
+   }
+}
+
+.goals,
+.plans {
+   .top {
+      padding: 15px;
+
+      span {
+         font-size: 18px;
+      }
+   }
+
+   .bot {
+      padding: 15px;
+      border-top: 1px solid rgb(83, 83, 83);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .savebtn,
+      .clearbtn {
+         padding: 7px;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-size: 13px;
+         border-radius: 6px;
+      }
+
+      .savebtn {
+         background: white;
+         color: black;
+      }
+
+      .clearbtn {
+         border: 1px solid white;
+         color: white;
+      }
+   }
+
+   .add {
+      padding: 0 15px 15px 15px;
+
+      button {
+         padding: 7px;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border-radius: 6px;
+         font-size: 13px;
+         border: 1px dotted rgb(83, 83, 83);
+      }
+   }
+}
+
+.plans {
+   
+   .planlist {
+      .top {
+         padding: 15px;
+         font-size: 18px;
+      }
+
+      .plan {
+         padding: 0 15px 15px 15px;
+         display: flex;
+         gap: 10px;
+         .left {
+            width: 30px;
+            .counter {
+               padding: 5px 0;
+               font-size: 14px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               border-radius: 7px;
+            }
+         }
+         .right {
+            padding-top: 3.5px;
+            width: 100%;
+         }
+      }
+
+      .bot {
+         .editbtn {
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-radius: 7px;
+            padding: 8px;
+            background: white;
+            color: black;
+            transition: .2s ease;
+
+            &:hover {
+               background: rgba(255, 255, 255, 0.595);
+            }
+         }
+      }
+   }
+
+   .mid {
+      .plan {
+         display: flex;
+         border-top: 1px solid rgb(83, 83, 83);
+         padding: 15px;
+         gap: 10px;
+
+         .left {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            width: 40px;
+
+            .counter {
+               padding: 8px 0;
+               font-size: 14px;
+               border-radius: 10px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+            }
+         }
+
+         .right {
+            width: 100%;
+
+            .inpdiv {
+               width: 100%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               position: relative;
+
+               textarea {
+                  width: 100%;
+                  height: 70px;
+                  white-space: pre-wrap;
+                  word-wrap: break-word;
+                  overflow-wrap: break-word;
+                  padding: 7px 30px 7px 10px;
+                  border-radius: 7px;
+                  font-size: 14px;
+
+                  &::-webkit-scrollbar {
+                     width: 10px;
+                  }
+
+                  &::-webkit-scrollbar-thumb {
+                     background-color: #FF8A00;
+                     border-radius: 10px;
+                     border: 2px solid #1c0808;
+                  }
+
+                  &::-webkit-scrollbar-track {
+                     background-color: transparent;
+                     border-radius: 10px;
+                     padding: 5px;
+                  }
+               }
+
+               .limit {
+                  position: absolute;
+                  right: 1.5%;
+                  bottom: 15%;
+                  font-size: 13px;
+               }
+
+               .deletebtn {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  position: absolute;
+                  right: 1.6%;
+                  top: 15%;
+               }
+            }
+         }
+      }
+   }
+}
+
+.goals {
+   .goalslist {
+      .top {
+         padding: 15px;
+         font-size: 18px;
+      }
+
+      .goal {
+         padding: 15px;
+         display: flex;
+         flex-direction: column;
+         gap: 15px;
+         border-top: 1px solid rgb(83, 83, 83);
+
+         span {
+            font-size: 14px;
+         }
+      }
+
+      .bot {
+         .editbtn {
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-radius: 7px;
+            padding: 8px;
+            background: white;
+            color: black;
+            transition: .2s ease;
+
+            &:hover {
+               background: rgba(255, 255, 255, 0.595);
+            }
+         }
+      }
+   }
+
+   .inpdiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .limit {
+         position: absolute;
+         right: 1.5%;
+         bottom: 15%;
+         font-size: 13px;
+      }
+   }
+
+   .mid {
+      .goaledit {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         padding: 15px;
+         border-top: 1px solid rgb(83, 83, 83);
+
+         .goalinp {
+            width: 100%;
+            height: 60px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            padding: 7px 10px;
+            border-radius: 7px;
+            font-size: 14px;
+
+            &::-webkit-scrollbar {
+               width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+               background-color: #FF8A00;
+               border-radius: 10px;
+               border: 2px solid #1c0808;
+            }
+
+            &::-webkit-scrollbar-track {
+               background-color: transparent;
+               border-radius: 10px;
+               padding: 5px;
+            }
+         }
+
+         .bottom {
+            .bottomcontainer {
+               display: flex;
+               align-items: center;
+               gap: 10px;
+
+               .datetext {
+                  font-size: 14px;
+               }
+
+               .date {
+                  border-radius: 7px;
+
+                  * {
+                     font-size: 13px !important;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+.errtext {
+   font-size: 13px;
+   color: red;
+   padding-left: 3px;
+}

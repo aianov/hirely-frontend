@@ -1,0 +1,160 @@
+.main {
+    border: 1px solid rgb(83, 83, 83);
+    background: #272727;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: 1200px) {
+        min-height: 100vh;
+        margin-top: 0;
+        border: none !important;
+        border-radius: 0 !important;
+    }
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+        color: #bababa;
+        font-size: 18px;
+    }
+}
+
+.editorContainer {
+    border: 1px solid rgb(83, 83, 83);
+    border-radius: 4px;
+    padding: 10px;
+    background: #272727;
+    /* Задний цвет */
+}
+
+.toolbar {
+    margin-bottom: 10px;
+}
+
+.toolbarButton {
+    background: #ffffff6d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.editor {
+    // border-bottom: 1px solid rgb(83, 83, 83);
+    border-top: 1px solid rgb(83, 83, 83);
+    padding: 20px 0 5px 0;
+    cursor: text;
+    background: #272727;
+
+    .editorcontainer {
+        min-height: 150px;
+    }
+}
+
+.customButton {
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+}
+
+.customButton:hover {
+    background-color: #e0e0e0;
+}
+
+.titlediv {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    input {
+        color: white;
+        font-size: 25px;
+
+        &::placeholder {
+            color: #7d8792;
+        }
+    }
+}
+
+.selecttag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    row-gap: 7px;
+    border-bottom: 1px solid rgb(83, 83, 83);
+    padding-bottom: 20px;
+
+    .tag,
+    .selected {
+        background: black;
+        color: #bababa;
+        padding: 4.5px 12.5px;
+        font-size: 14px;
+        border-radius: 12px;
+    }
+
+    .selected {
+        background: rgba(255, 89, 0, 0.75);
+        color: white;
+    }
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .createpostbtn {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        color: white;
+        background: #181818;
+        padding: 10px 30px;
+        border-radius: 10px;
+    }
+}
+
+.mid {
+    display: block;
+    padding: 0 20px;
+
+    .midslider {
+        padding: 20px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 400px;
+        position: relative;
+        border: 1px solid rgb(83, 83, 83);
+        border-radius: 10px;
+
+        img {
+            border-radius: 10px;
+        }
+
+        .editimgbtn {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            top: 2%;
+            right: 2%;
+            position: absolute;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.main {
+   * {
+      color: white;
+   }
+   padding-bottom: 20px;
+}
+
+.privacy {
+   border-bottom: 1px solid rgb(83, 83, 83);
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+
+   .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left {
+         text-align: left;
+         display: flex;
+         flex-direction: column;
+         gap: 7.5px;
+
+         .title {
+            max-width: 300px;
+            font-size: 16px;
+         }
+
+         .subtitle {
+            max-width: 350px;
+            color: #BABABA;
+            font-size: 14px;
+         }
+      }
+
+      .right {
+         min-width: 28%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+}

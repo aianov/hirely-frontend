@@ -1,0 +1,122 @@
+$btnsBRad: 7px;
+
+.main {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+
+    /* Затемненный фон */
+    background: rgba(0, 0, 0, 0.5);
+
+    /* Размытие фона */
+    backdrop-filter: blur(15px);
+
+    /* Обязательно использовать для детей, чтобы они не размывались */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagediv {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.loadingcontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+        font-size: 30px;
+        color: white !important;
+    }
+}
+
+.finishbtn {
+    background: rgb(162, 0, 255);
+}
+
+.cropArea {
+    position: absolute;
+    border: 2px dashed red;
+    cursor: move;
+}
+
+.resizeHandle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    cursor: se-resize;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+
+    * {
+        color: white;
+    }
+
+    .top {
+        .resetbtn {
+            cursor: pointer;
+            height: 40px;
+            padding: 0 15px;
+        }
+    }
+    .bottom {
+        display: flex;
+
+        .bottombtns {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+
+            .left,
+            .mid,
+            .right {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button {
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 15px;
+                    background: #272727;
+                }
+            }
+
+            .cancelbtn {
+                border-top-left-radius: $btnsBRad;
+                border-bottom-left-radius: $btnsBRad;
+            }
+
+            .savebtn {
+                border-top-right-radius: $btnsBRad;
+                border-bottom-right-radius: $btnsBRad;
+            }
+        }
+    }
+}
