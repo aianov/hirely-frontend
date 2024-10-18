@@ -1,20 +1,11 @@
 import { GenderIcon } from '@/assets/icons/MainPage/MyProfile/GenderIcon'
-import { AddFriend } from '@/assets/icons/Ui/AddFriend'
-import { CancelFriendIcon } from '@/assets/icons/Ui/CancelFriend'
 import { NotFoundIcon } from '@/assets/icons/Ui/NotFoundIcon'
-import { RemoveFriendIcon } from '@/assets/icons/Ui/RemoveFriend'
-import { SendMessageToUserIcon } from '@/assets/icons/Ui/SendMessageIcon'
-import { FriendListModal } from '@/features/Modals/FriendListModal/FriendListModal'
-import { SubscribersListModal } from '@/features/Modals/SubscribersListModal/SubscribersListModal'
-import { cancelFriendRequestApi, removeFriendApi, sendFriendRequestApi } from '@/shared/api/friend/api'
 import { dateFormatter } from '@/shared/utils/dateFormatter'
 import { getProfileStatuses } from '@/shared/utils/globalJsxData'
 import { getUserDataByPrivacy } from '@/shared/utils/someFunctions'
 import { genderValuesTranslationToRus } from '@/shared/utils/translations'
 import { chatApitStore } from '@/stores/api/chat-store/chat-store'
 import { chatStore } from '@/stores/chat-store/chat-store'
-import { friendStore } from '@/stores/friend-store/friend-store'
-import { User } from '@/stores/profile-store/types'
 import { subscribersStore } from '@/stores/subscribers-store/subscribers-store'
 import { themeStore } from '@/stores/theme/theme-store'
 import { BdIcon } from '@assets/icons/MainPage/MyProfile/BdIcon'
@@ -39,7 +30,6 @@ export const Profile = observer(() => {
    const navigate = useNavigate()
    const { tag } = useParams()
 
-   const { setOpen } = friendStore
    const { setSubOpen } = subscribersStore
 
    const NavBtnsProfile = [
@@ -58,35 +48,6 @@ export const Profile = observer(() => {
       }
       catch (err) { console.log }
    }, [tag])
-
-   // send friend req
-   const sendFriendRequest = useCallback(async () => {
-      try {
-         const res = await sendFriendRequestApi({ senderId: profile.id, receiverId: user.id })
-         if (res.status == 201) {
-            console.log(res)
-            const requestId = res.data.id
-            const newUser: User = { ...user, requestId }
-            setUser(newUser)
-            setStatus('pending')
-         }
-      } catch (err) { console.log(err) }
-   }, [profile, user, setUser, setStatus])
-
-   // cancel friend req
-   const cancelFriendRequest = useCallback(async () => {
-      try {
-         const res = await cancelFriendRequestApi(user.requestId!)
-         if (res.status == 200) setStatus('notfriend')
-      } catch (err) { console.log(err) }
-   }, [user?.requestId])
-
-   const removeFriend = useCallback(async () => {
-      try {
-         const res = await removeFriendApi(profile.id, user.id)
-         if (res.status == 200) setStatus('notfriend')
-      } catch (err) { console.log(err) }
-   }, [])
 
    useEffect(() => {
       localStorage.setItem('last-route', url)
@@ -110,9 +71,6 @@ export const Profile = observer(() => {
 
    return (
       <div className={s.main}>
-         <FriendListModal type='profile' />
-         <SubscribersListModal type="profile" />
-
          {tag && user ? (
             <div className={s.profilecontainer}>
                <div className={s.top}>
@@ -130,87 +88,6 @@ export const Profile = observer(() => {
                            {getProfileStatuses(user?.more?.p_lang[0], 23)}
                         </div>
                      </div>
-
-                     {/* btn for add for friends */}
-                     {status == 'notfriend' && (
-                        <>
-                           {user?.isFriendChat ? (
-                              <button
-                                 className={s.addfriend}
-                                 onClick={sendFriendRequest}
-                              >
-                                 <AddFriend />
-                                 <span>Добавить в друзья</span>
-                              </button>
-                           ) : (
-                              <div className={s.useractionbtns}>
-                                 <button
-                                    className={s.sendmessage}
-                                    style={currentTheme.btnsTheme}
-                                    onClick={() => sendMessageHandler()}
-                                 >
-                                    <SendMessageToUserIcon color={currentTheme.textColor.color} />
-                                    <span>Написать</span>
-                                 </button>
-                                 <button
-                                    className={s.addfriendmini}
-                                    onClick={sendFriendRequest}
-                                 >
-                                    <AddFriend size={17.5} />
-                                 </button>
-                              </div>
-                           )}
-                        </>
-                     )}
-
-                     {status == 'friend' && (
-                        <div className={s.useractionbtns2}>
-                           <button
-                              className={s.sendmessagemini}
-                              onClick={() => sendMessageHandler()}
-                              style={currentTheme.btnsTheme}
-                           >
-                              <SendMessageToUserIcon size={17.5} color={currentTheme.textColor.color} />
-                           </button>
-                           <button
-                              className={s.removefriend}
-                              onClick={removeFriend}
-                           >
-                              <RemoveFriendIcon color={currentTheme.secondTextColor.color} size={17.5} />
-                              <span style={currentTheme.secondTextColor}>Убрать</span>
-                           </button>
-                        </div>
-                     )}
-
-                     {status == 'pending' && (
-                        <>
-                           {user.isFriendChat ? (
-                              <button
-                                 className={s.pendingfriend}
-                                 onClick={cancelFriendRequest}
-                              >
-                                 <CancelFriendIcon size={17.5} />
-                                 <span>Отменить запрос</span>
-                              </button>
-                           ) : (
-                              <div className={s.useractionbtns}>
-                                 <button
-                                    className={s.sendmessage}
-                                    style={currentTheme.btnsTheme}
-                                 >
-                                    <SendMessageToUserIcon color={currentTheme.textColor.color} />
-                                    <span>Написать</span>
-                                 </button>
-                                 <button
-                                    className={s.pendingfriendmini}
-                                    onClick={cancelFriendRequest}
-                                 >
-                                    <CancelFriendIcon />
-                                 </button>
-                              </div>
-                           )}
-                        </>
-                     )}
                   </div>
 
                   {/* description */}
@@ -273,7 +150,6 @@ export const Profile = observer(() => {
                      <div className={s.midleft}>
                         <button
                            className={s.infodiv}
-                           onClick={() => setOpen(true)}
                         >
                            <span>{socialNumberFormat(user?.more?.friends)}</span>
                            <span>друзей</span>
