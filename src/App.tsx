@@ -1,4 +1,3 @@
-import { MantineProvider } from '@mantine/core'
 import { ConfigProvider } from 'antd'
 import ruRU from 'antd/lib/locale/ru_RU'
 import { observer } from 'mobx-react-lite'
@@ -135,10 +134,8 @@ export const App = observer(() => {
         baseColor={currentTheme.bgTheme.background as string}
         highlightColor="#444"
       >
-        <MantineProvider>
-          <ToastContainer />
-          <MainRoutes />
-        </MantineProvider>
+        <ToastContainer />
+        <MainRoutes />
       </SkeletonTheme>
     </ConfigProvider>
   )

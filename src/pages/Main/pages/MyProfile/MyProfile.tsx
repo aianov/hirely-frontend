@@ -1,11 +1,8 @@
 import { GenderIcon } from '@/assets/icons/MainPage/MyProfile/GenderIcon'
 import { NotFoundIcon } from '@/assets/icons/Ui/NotFoundIcon'
-import { FriendListModal } from '@/features/Modals/FriendListModal/FriendListModal'
-import { SubscribersListModal } from '@/features/Modals/SubscribersListModal/SubscribersListModal'
 import { dateFormatter } from '@/shared/utils/dateFormatter'
 import { getProfileStatuses } from '@/shared/utils/globalJsxData'
 import { genderValuesTranslationToRus } from '@/shared/utils/translations'
-import { friendStore } from '@/stores/friend-store/friend-store'
 import { subscribersStore } from '@/stores/subscribers-store/subscribers-store'
 import { themeStore } from '@/stores/theme/theme-store'
 import { BdIcon } from '@assets/icons/MainPage/MyProfile/BdIcon'
@@ -28,7 +25,6 @@ export const MyProfile = observer(() => {
 
    // mobx
    const { profile } = profileStore
-   const { setOpen, friendCount, setFriendCount, friendRequestCount, setFriendRequestCount } = friendStore
    const { setSubOpen } = subscribersStore
 
    // states
@@ -37,8 +33,6 @@ export const MyProfile = observer(() => {
    const getProfileHandler = useCallback(async () => {
       try {
          const profileApi = (await getProfile()).data.user
-         setFriendCount(profileApi?.more?.friends)
-         setFriendRequestCount(profileApi?.more?.friendRequestsCount)
       }
       catch (err) { console.log }
    }, [])
@@ -61,10 +55,6 @@ export const MyProfile = observer(() => {
 
    return (
       <div className={s.main}>
-         {/* modal */}
-         <FriendListModal />
-         <SubscribersListModal />
-
          <div className={s.profilecontainer}>
             <div className={s.top}>
                <div className={s.left}>
@@ -126,25 +116,6 @@ export const MyProfile = observer(() => {
                </div>
                <div className={s.mid}>
                   <div className={s.midleft}>
-                     <button
-                        className={s.infodiv}
-                        onClick={() => setOpen(true)}
-                     >
-                        <span style={themeStore.currentTheme.textColor}>{socialNumberFormat(friendCount)}</span>
-                        <span style={themeStore.currentTheme.textColor}>друзей</span>
-                        {friendRequestCount !== 0 && (
-                           <div className={s.counter}>
-                              <span style={themeStore.currentTheme.textColor}>{socialNumberFormat(friendRequestCount)}</span>
-                           </div>
-                        )}
-                     </button>
-                     <button
-                        className={s.infodiv}
-                        onClick={() => setSubOpen(true)}
-                     >
-                        <span style={themeStore.currentTheme.textColor}>{socialNumberFormat(friendRequestCount)}</span>
-                        <span style={themeStore.currentTheme.textColor}>подписчиков</span>
-                     </button>
                      <div className={s.infodiv}>
                         <span style={themeStore.currentTheme.textColor}>{socialNumberFormat(profile?.more?.posts_count)}</span>
                         <span style={themeStore.currentTheme.textColor}>постов</span>
